@@ -9,7 +9,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
 	let ytLink = `https://yt-downloader.aliefputra.repl.co/?url=${url}&filter=audioonly&quality=highestaudio&contenttype=audio/mpeg`
 	let capt = `*Title:* ${title}\n*Published:* ${ago}\n*Duration:* ${timestamp}\n*Views:* ${views.toLocaleString()}\n*Url:* ${url}`
 	let buttons = [{ buttonText: { displayText: 'Video' }, buttonId: `${usedPrefix}ytv ${url} 360` }]
-	let msg = await conn.sendMessage(m.chat, { image: { url: image }, caption: capt, footer: '_Audio on progress..._', buttons }, { quoted: m })
+	let msg = await conn.sendMessage(m.chat, { image: { url: image }, caption: capt, footer: '_Audio Sedang Diproses..._', buttons }, { quoted: m })
 	// if (seconds > 3600) return conn.sendMessage(m.chat, { document: { url: ytLink }, mimetype: 'audio/mpeg', fileName: `${title}.mp3` }, { quoted: m })
 	conn.sendMessage(m.chat, { [seconds > 3600 ? 'document' : 'audio']: { url: ytLink }, mimetype: 'audio/mpeg', fileName: `${title}.mp3` }, { quoted: msg })
 }
