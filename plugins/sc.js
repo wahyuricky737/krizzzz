@@ -11,14 +11,14 @@ let buttonMessage= {
 'forwardingScore':200,
 'isForwarded':true,
 'externalAdReply':{
-'mediaUrl': 'http://github.com/Rlxfly/re-md',
+'mediaUrl': 'http://github.com/Warikrr/rull',
 'mediaType': 2,
 'previewType': 'pdf',
-'title': 'Searching Source Code?',
+'title': 'Mau Sc Yang Lain?,Cek Aja Channel Yt Nya',
 'body': me,
 'thumbnail': thumb2,
-'sourceUrl': 'https://www.youtube.com/watch?v=qBJ0F9Ecax0'}},
-'caption': 'http://github.com/Rlxfly/re-md',
+'sourceUrl': 'https://youtube.com/channel/UC1ikkqsPvtWuE_QonsET1yg'}},
+'caption': 'http://github.com/Warikrr/rull',
 'footer': me,
 'buttons':[
 {'buttonId': _p + 'menu','buttonText':{'displayText':'ᴍᴇɴᴜ'},'type':1},
