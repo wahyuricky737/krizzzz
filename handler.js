@@ -46,27 +46,27 @@ export async function handler(chatUpdate) {
                 if (typeof chat !== 'object') global.db.data.chats[m.chat] = {}
                 if (chat) {
 	                if (!('isBanned' in chat)) chat.isBanned = false
-	                if (!('welcome' in chat)) chat.welcome = false
-	                if (!('detect' in chat)) chat.detect = false
+	                if (!('welcome' in chat)) chat.welcome = true
+	                if (!('detect' in chat)) chat.detect = true
 	                if (!('sWelcome' in chat)) chat.sWelcome = ''
 	                if (!('sBye' in chat)) chat.sBye = ''
 	                if (!('sPromote' in chat)) chat.sPromote = ''
 	                if (!('sDemote' in chat)) chat.sDemote = ''
-	                if (!('antiDelete' in chat)) chat.antiDelete = false
-	                if (!('antiLink' in chat)) chat.antiLink = false
-	                if (!('viewOnce' in chat)) chat.viewOnce = false
+	                if (!('antiDelete' in chat)) chat.antiDelete = true
+	                if (!('antiLink' in chat)) chat.antiLink = true
+	                if (!('viewOnce' in chat)) chat.viewOnce = true
 	                if (!isNumber(chat.expired)) chat.expired = 0
 	            } else global.db.data.chats[m.chat] = {
 	                isBanned: false,
-	                welcome: false,
-	                detect: false,
+	                welcome: true,
+	                detect: true,
 	                sWelcome: '',
 	                sBye: '',
 	                sPromote: '',
 	                sDemote: '',
-	                antiDelete: false,
-	                antiLink: false,
-	                viewOnce: false,
+	                antiDelete: true,
+	                antiLink: true,
+	                viewOnce: true,
 	                expired: 0
 	            }
             }
@@ -74,12 +74,12 @@ export async function handler(chatUpdate) {
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
             if (settings) {
                 if (!('self' in settings)) settings.self = false
-                if (!('autoread' in settings)) settings.autoread = false
-                if (!('restrict' in settings)) settings.restrict = false
+                if (!('autoread' in settings)) settings.autoread = true
+                if (!('restrict' in settings)) settings.restrict = true
             } else global.db.data.settings[this.user.jid] = {
                 self: false,
-                autoread: false,
-                restrict: false
+                autoread: true,
+                restrict: true
             }
         } catch (e) {
             console.error(e)
